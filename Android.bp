@@ -34,3 +34,39 @@ cc_library_headers {
         "src/drivers",
     ],
 }
+
+cc_defaults {
+    name: "wpa_supplicant_cflags_default",
+}
+
+cc_fuzz {
+    name: "mainline_supplicant_service_fuzzer",
+}
+
+prebuilt_etc {
+    name: "mainline_supplicant_conf",
+    src: "empty",
+    filename: "mainline_supplicant.conf",
+    installable: false,
+}
+
+prebuilt_etc {
+    name: "mainline_supplicant_rc",
+    src: "empty",
+    filename: "mainline_supplicant.rc",
+    installable: false,
+}
+
+prebuilt_etc {
+    name: "android.hardware.wifi.supplicant.xml.prebuilt",
+    src: "empty",
+    filename: "android.hardware.wifi.supplicant.xml",
+    installable: false,
+}
+
+prebuilt_etc {
+    name: "android.hardware.wifi.hostapd.xml.prebuilt",
+    src: "empty",
+    filename: "android.hardware.wifi.hostapd.xml",
+    installable: false,
+}
